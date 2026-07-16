@@ -412,6 +412,100 @@ table.cmp tr:hover td.win{background:#EAFBF9;}
   .edi-tl-content{order:2; max-width:none; text-align:left !important; padding:0 0 0 20px !important; justify-self:start !important;}
   .edi-tl-spacer{display:none;}
 }
+
+/* Practice Mate — bespoke page */
+.pm-hero{position:relative; padding:100px 0 90px; overflow:hidden; background:var(--mist);}
+.pm-blob-a{position:absolute; top:-16%; right:-8%; width:42%; aspect-ratio:1; border-radius:50%; background:radial-gradient(circle, #cfeeee 0%, rgba(207,238,238,0) 70%); filter:blur(2px); pointer-events:none;}
+.pm-blob-b{position:absolute; bottom:-20%; left:-10%; width:36%; aspect-ratio:1; border-radius:50%; background:radial-gradient(circle, rgba(33,85,181,.13) 0%, rgba(33,85,181,0) 70%); pointer-events:none;}
+.pm-hero-grid{display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:center; position:relative; z-index:1;}
+.pm-hero-grid h1{font-size:38px; line-height:1.14; margin:14px 0 18px;}
+.pm-hero-grid p{color:var(--ink-soft); font-size:15.5px; line-height:1.7; margin-bottom:28px; max-width:480px;}
+.pm-hero-visual{position:relative; max-width:380px; margin:0 auto;}
+.pm-day-card{background:#fff; border:1px solid var(--line); border-radius:16px; padding:20px 22px; box-shadow:var(--shadow-xl); position:relative; z-index:1;}
+.pm-day-card-back{position:absolute; inset:0; transform:translate(18px,18px); background:linear-gradient(135deg,var(--blue-soft),#E4FBF9); border:none; box-shadow:none; z-index:0; padding:0;}
+.pm-day-card-head{display:flex; justify-content:space-between; align-items:baseline; margin-bottom:12px; padding-bottom:12px; border-bottom:1px solid var(--line);}
+.pm-day-card-head b{font-size:13.5px; color:var(--navy);}
+.pm-day-card-head span{font-size:11.5px; color:var(--ink-soft);}
+.pm-day-row{display:flex; align-items:center; gap:9px; padding:7px 0; font-size:12px;}
+.pm-day-row-active{background:var(--blue-soft); margin:0 -10px; padding:7px 10px; border-radius:8px;}
+.pm-time{color:var(--ink-soft); width:34px; flex-shrink:0; font-weight:500;}
+.pm-name{color:var(--ink); font-weight:500; margin-left:auto;}
+.pm-chip{font-size:9.5px; font-weight:700; padding:3px 8px; border-radius:10px; white-space:nowrap; flex-shrink:0;}
+.pm-chip-done{background:#E4FBF9; color:var(--teal-deep);}
+.pm-chip-active{background:var(--blue-soft); color:var(--blue);}
+.pm-chip-wait{background:#FFF3D6; color:#9A6B00;}
+.pm-chip-upcoming{background:var(--mist); color:var(--ink-soft);}
+.pm-chip-noshow{background:#FBE4E4; color:#B23B3B;}
+@media (max-width:900px){ .pm-hero-grid{grid-template-columns:1fr; gap:40px;} .pm-hero-grid h1{font-size:30px;} }
+
+.pm-feature-row{display:grid; grid-template-columns:.95fr 1.05fr; gap:56px; align-items:center;}
+.pm-feature-row-rev{grid-template-columns:.85fr 1.15fr;}
+.pm-feature-row h2{font-size:30px; margin:12px 0 16px; line-height:1.16;}
+.pm-feature-row p{color:var(--ink-soft); font-size:15px; line-height:1.7; margin-bottom:14px;}
+@media (max-width:900px){ .pm-feature-row, .pm-feature-row-rev{grid-template-columns:1fr;} }
+
+.pm-timeline-wrap{background:#fff; border:1px solid var(--line); border-radius:16px; padding:24px;}
+.pm-timeline-head{font-size:12px; font-weight:700; color:var(--navy); margin-bottom:16px;}
+.pm-tl-hours{display:flex; justify-content:space-between; font-size:10.5px; color:var(--ink-soft); margin-bottom:6px; padding:0 2px;}
+.pm-tl-track{position:relative; height:56px; background:var(--mist); border-radius:8px; margin-bottom:16px;}
+.pm-tl-block{position:absolute; top:8px; bottom:8px; border-radius:6px; font-size:10px; font-weight:700; display:flex; align-items:center; justify-content:center; padding:0 4px; overflow:hidden; white-space:nowrap;}
+.pm-tl-now{position:absolute; top:-6px; bottom:-6px; width:2px; background:var(--blue); z-index:2;}
+.pm-tl-now span{position:absolute; top:-16px; left:50%; transform:translateX(-50%); font-size:9px; font-weight:700; color:var(--blue); white-space:nowrap;}
+.pm-tl-legend{display:flex; flex-wrap:wrap; gap:12px 16px; font-size:11px; color:var(--ink-soft);}
+.pm-tl-legend span{display:flex; align-items:center; gap:6px;}
+.pm-tl-legend i{width:10px; height:10px; border-radius:3px; display:inline-block;}
+
+.pm-fan{position:relative; height:360px; display:flex; align-items:center; justify-content:center;}
+.pm-fan-card{position:absolute; width:186px; background:#fff; border:1px solid var(--line); border-radius:14px; padding:18px; box-shadow:var(--shadow-md); transition:transform .35s var(--ease), box-shadow .35s var(--ease);}
+.pm-fan-card b{display:block; font-size:13.5px; color:var(--navy); margin-bottom:2px;}
+.pm-fan-card span{font-size:11.5px; color:var(--ink-soft);}
+.pm-fan-ic{font-size:20px; margin-bottom:8px;}
+.pm-fan-1{transform:rotate(-13deg) translate(-92px,-18px); z-index:1;}
+.pm-fan-2{transform:rotate(-5deg) translate(-42px,4px); z-index:2;}
+.pm-fan-3{transform:rotate(7deg) translate(66px,-6px); z-index:2;}
+.pm-fan-main{transform:rotate(1deg) translate(2px,42px); z-index:3; box-shadow:var(--shadow-xl); border:2px solid var(--blue);}
+.pm-fan:hover .pm-fan-1{transform:rotate(-18deg) translate(-116px,-26px);}
+.pm-fan:hover .pm-fan-2{transform:rotate(-7deg) translate(-54px,-2px);}
+.pm-fan:hover .pm-fan-3{transform:rotate(10deg) translate(82px,-12px);}
+@media (max-width:900px){ .pm-fan{height:300px; margin-bottom:20px;} }
+@media (max-width:480px){ .pm-fan-card{width:150px; padding:14px;} .pm-fan-1{transform:rotate(-13deg) translate(-58px,-16px);} .pm-fan-3{transform:rotate(7deg) translate(48px,-4px);} .pm-fan-main{transform:rotate(1deg) translate(0,36px);} }
+
+.pm-flow{position:relative; max-width:1000px; margin:0 auto; aspect-ratio:1000/220;}
+.pm-flow-svg{position:absolute; inset:0; width:100%; height:100%; overflow:visible;}
+.pm-flow-path{fill:none; stroke:var(--line); stroke-width:2; stroke-dasharray:1 9; stroke-linecap:round;}
+.pm-flow-dot{fill:#fff; stroke:var(--blue); stroke-width:2.5;}
+.pm-flow-token circle{filter:drop-shadow(0 4px 10px rgba(33,85,181,.45));}
+.pm-flow-label{position:absolute; transform:translate(-50%,-50%); text-align:center; width:130px;}
+.pm-flow-label b{font-size:13px; color:var(--navy); font-weight:700; line-height:1.25;}
+@media (max-width:760px){
+  .pm-flow{aspect-ratio:auto; height:420px;}
+  .pm-flow-label{width:110px;}
+  .pm-flow-label b{font-size:11.5px;}
+}
+@media (max-width:520px){
+  .pm-flow{height:520px;}
+}
+@media (prefers-reduced-motion: reduce){ .pm-flow-token animateMotion{ display:none; } }
+
+.pm-dash{background:#fff; border:1px solid var(--line); border-radius:16px; padding:22px; box-shadow:var(--shadow-lg);}
+.pm-dash-kpis{display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-bottom:18px;}
+.pm-dash-kpi{background:var(--mist); border-radius:10px; padding:12px; text-align:center;}
+.pm-dash-kpi span{display:block; font-size:10px; color:var(--ink-soft); margin-bottom:4px;}
+.pm-dash-kpi b{font-size:19px; color:var(--navy);}
+.pm-dash-chart{border:1px solid var(--line); border-radius:12px; padding:16px; margin-bottom:14px;}
+.pm-dash-chart-head{font-size:11px; font-weight:700; color:var(--ink-soft); margin-bottom:12px;}
+.pm-dash-bars{display:flex; align-items:flex-end; gap:8px; height:90px;}
+.pm-bar{flex:1; background:var(--blue-soft); border-radius:4px 4px 0 0;}
+.pm-bar-key{background:var(--grad);}
+.pm-dash-list-row{display:flex; justify-content:space-between; padding:9px 0; border-top:1px solid var(--line); font-size:12.5px;}
+.pm-dash-list-row span{color:var(--ink-soft);}
+.pm-dash-list-row b{color:var(--navy);}
+
+.pm-cta{background:linear-gradient(135deg, var(--blue-soft) 0%, #E4FBF9 100%); border-radius:24px; padding:64px 40px; text-align:center;}
+.pm-cta h2{font-size:32px; margin-bottom:14px;}
+.pm-cta p{color:var(--ink-soft); font-size:15.5px; max-width:520px; margin:0 auto 28px;}
+.pm-cta-actions{display:flex; gap:14px; justify-content:center; flex-wrap:wrap;}
+
 .plan h3{font-size:19px; margin-bottom:6px;}
 .plan .desc{font-size:13px; color:var(--ink-soft); margin-bottom:20px; min-height:32px;}
 .plan .price{display:flex; align-items:baseline; gap:6px; margin-bottom:22px;}
@@ -1435,7 +1529,7 @@ footer{background:var(--ink); color:#B7C0CE; padding:64px 0 30px;}
       <div class="page-banner" id="banner-products"></div>
       <div class="grid-2">
         <div class="card reveal linkable" data-goto="edi-clearing-house"><div class="ic">⇄</div><h3>EDI Clearing House</h3><p>Electronic claim submission, clearinghouse setup and testing, status tracking, and rejection handling, connected to the billing workflow.</p><span class="card-more">Learn more →</span></div>
-        <div class="card reveal linkable" data-detail="practice-mate"><div class="ic">📅</div><h3>Practice Mate</h3><p>Scheduling, registration, check‑in, eligibility, and front‑desk coordination in one practice management workspace.</p><span class="card-more">Learn more →</span></div>
+        <div class="card reveal linkable" data-goto="practice-mate"><div class="ic">📅</div><h3>Practice Mate</h3><p>Scheduling, registration, check‑in, eligibility, and front‑desk coordination in one practice management workspace.</p><span class="card-more">Learn more →</span></div>
         <div class="card reveal linkable" data-detail="ehr-247"><div class="ic">🩺</div><h3>EHR 24/7</h3><p>The OpenEMR‑based clinical workspace on managed cloud hosting: charting, encounters, prescriptions, orders, and documentation.</p><span class="card-more">Learn more →</span></div>
         <div class="card reveal linkable" data-detail="insurance-discovery"><div class="ic">🔍</div><h3>Insurance Discovery <span class="soon-pill">Coming soon</span></h3><p>Identify active coverage when insurance details are missing or incomplete, to reduce unbilled visits and eligibility‑related denials.</p><span class="card-more">Learn more →</span></div>
       </div>
@@ -1604,6 +1698,221 @@ footer{background:var(--ink); color:#B7C0CE; padding:64px 0 30px;}
     </div>
   </section>
 </section>
+
+<!-- ============================================================ -->
+<!-- PAGE: PRACTICE MATE (bespoke layout) -->
+<!-- ============================================================ -->
+<section class="page" id="page-practice-mate">
+
+  <!-- Section 1: Hero — light hero with a floating "day schedule" mock card -->
+  <section class="pm-hero">
+    <div class="pm-blob-a"></div>
+    <div class="pm-blob-b"></div>
+    <div class="wrap pm-hero-grid">
+      <div class="reveal">
+        <div class="eyebrow">Practice Mate</div>
+        <h1>One System for Daily Practice Management</h1>
+        <p>Practice Mate helps healthcare teams manage appointments, patient information, billing activities, and administrative work through eMedEMR. Staff can follow each patient visit from scheduling through payment without depending on separate tools.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#contact" data-goto="contact">Schedule a Demo</a>
+          <a class="btn btn-ghost" href="#practice-mate" data-goto="practice-mate">View Practice Mate</a>
+        </div>
+      </div>
+      <div class="pm-hero-visual reveal">
+        <div class="pm-day-card pm-day-card-back"></div>
+        <div class="pm-day-card">
+          <div class="pm-day-card-head"><b>Today · Dr. Alvarez</b><span>6 visits</span></div>
+          <div class="pm-day-row"><span class="pm-time">9:00</span><span class="pm-chip pm-chip-done">Completed</span><span class="pm-name">M. Kingston</span></div>
+          <div class="pm-day-row"><span class="pm-time">9:40</span><span class="pm-chip pm-chip-done">Completed</span><span class="pm-name">R. Osei</span></div>
+          <div class="pm-day-row pm-day-row-active"><span class="pm-time">10:20</span><span class="pm-chip pm-chip-active">In Room</span><span class="pm-name">A. Delgado</span></div>
+          <div class="pm-day-row"><span class="pm-time">11:00</span><span class="pm-chip pm-chip-wait">Checked In</span><span class="pm-name">J. Farrow</span></div>
+          <div class="pm-day-row"><span class="pm-time">11:40</span><span class="pm-chip pm-chip-upcoming">Upcoming</span><span class="pm-name">S. Whitlock</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Appointment & Front Office — horizontal day-timeline visual -->
+  <section class="section">
+    <div class="wrap">
+      <div class="pm-feature-row">
+        <div class="reveal">
+          <div class="eyebrow">Scheduling</div>
+          <h2>Manage the Day's Schedule Clearly</h2>
+          <p>View provider calendars, create appointments, update visit status, and record cancellations or no‑shows from a single scheduling screen.</p>
+          <p>Front‑office staff can also review patient details, insurance information, and registration requirements before the visit.</p>
+          <ul class="check-list">
+            <li>Provider and location calendars</li>
+            <li>Appointment scheduling</li>
+            <li>Patient check‑in and check‑out</li>
+            <li>Visit status updates</li>
+            <li>Registration details</li>
+            <li>Insurance information</li>
+          </ul>
+          <a class="card-more" href="#practice-mate" data-goto="practice-mate">View Scheduling Features →</a>
+        </div>
+        <div class="pm-timeline-wrap reveal">
+          <div class="pm-timeline-head">Front Desk · Room 2 &amp; 3</div>
+          <div class="pm-timeline">
+            <div class="pm-tl-hours"><span>8a</span><span>10a</span><span>12p</span><span>2p</span><span>4p</span><span>6p</span></div>
+            <div class="pm-tl-track">
+              <div class="pm-tl-block pm-chip-done" style="left:4%; width:13%;">Kingston</div>
+              <div class="pm-tl-block pm-chip-done" style="left:19%; width:10%;">Osei</div>
+              <div class="pm-tl-block pm-chip-active" style="left:32%; width:14%;">Delgado</div>
+              <div class="pm-tl-block pm-chip-wait" style="left:48%; width:11%;">Farrow</div>
+              <div class="pm-tl-block pm-chip-noshow" style="left:61%; width:9%;">No‑show</div>
+              <div class="pm-tl-block pm-chip-upcoming" style="left:73%; width:13%;">Whitlock</div>
+              <div class="pm-tl-block pm-chip-upcoming" style="left:88%; width:10%;">Reyes</div>
+              <div class="pm-tl-now" style="left:44%;"><span>Now</span></div>
+            </div>
+          </div>
+          <div class="pm-tl-legend">
+            <span><i class="pm-chip-done"></i>Completed</span>
+            <span><i class="pm-chip-active"></i>In room</span>
+            <span><i class="pm-chip-wait"></i>Checked in</span>
+            <span><i class="pm-chip-noshow"></i>No‑show</span>
+            <span><i class="pm-chip-upcoming"></i>Upcoming</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Patient Administration — fanned overlapping card stack -->
+  <section class="section tinted">
+    <div class="wrap">
+      <div class="pm-feature-row pm-feature-row-rev">
+        <div class="pm-fan reveal">
+          <div class="pm-fan-card pm-fan-1"><div class="pm-fan-ic">🔐</div><b>User Access</b><span>Role‑based permissions</span></div>
+          <div class="pm-fan-card pm-fan-2"><div class="pm-fan-ic">📎</div><b>Documents</b><span>Scans, forms, records</span></div>
+          <div class="pm-fan-card pm-fan-3"><div class="pm-fan-ic">🛡️</div><b>Insurance</b><span>Guarantor & coverage</span></div>
+          <div class="pm-fan-card pm-fan-main"><div class="pm-fan-ic">🧑‍⚕️</div><b>Patient Profile</b><span>M. Kingston · #10482</span></div>
+        </div>
+        <div class="reveal">
+          <div class="eyebrow">Patient Administration</div>
+          <h2>Patient Information Available When Staff Need It</h2>
+          <p>Patient demographics, contact details, insurance records, documents, and account information are maintained within the patient profile.</p>
+          <p>Access can be assigned based on the responsibilities of front‑office staff, providers, billing teams, and administrators.</p>
+          <ul class="check-list">
+            <li>Patient profile management</li>
+            <li>Insurance and guarantor details</li>
+            <li>Document storage</li>
+            <li>Provider and location setup</li>
+            <li>User access management</li>
+            <li>Administrative notes</li>
+          </ul>
+          <a class="card-more" href="#practice-mate" data-goto="practice-mate">Explore Patient Management →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Billing & Claims — animated claim journey along a curved path -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head center reveal">
+        <div class="eyebrow">Billing and Claims</div>
+        <h2>Follow Billing Activity After the Visit</h2>
+        <p>Review charges, prepare claims, monitor claim status, post payments, and review outstanding balances from the same patient and encounter record. Billing teams can identify rejected claims, unpaid accounts, and items that require follow‑up.</p>
+      </div>
+      <div class="pm-flow reveal" id="pmFlow">
+        <svg viewBox="0 0 1000 220" preserveAspectRatio="none" class="pm-flow-svg" id="pmFlowSvg">
+          <defs>
+            <linearGradient id="pmFlowGrad" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#2155B5"/>
+              <stop offset="100%" stop-color="#00A79E"/>
+            </linearGradient>
+          </defs>
+          <path id="pmFlowPath" class="pm-flow-path" d="M40,140 C120,90 140,50 220,50 C300,50 320,150 400,150 C480,150 500,50 580,50 C660,50 680,150 760,150 C820,150 840,90 900,60"/>
+          <circle cx="40" cy="140" r="6" class="pm-flow-dot"/>
+          <circle cx="220" cy="50" r="6" class="pm-flow-dot"/>
+          <circle cx="400" cy="150" r="6" class="pm-flow-dot"/>
+          <circle cx="580" cy="50" r="6" class="pm-flow-dot"/>
+          <circle cx="760" cy="150" r="6" class="pm-flow-dot"/>
+          <circle cx="900" cy="60" r="6" class="pm-flow-dot"/>
+          <g class="pm-flow-token" id="pmFlowToken">
+            <circle r="14" fill="url(#pmFlowGrad)"/>
+            <path d="M-5,-6 h10 v10 h-10 z M-3,-3 h6 M-3,0 h6 M-3,3 h4" stroke="#fff" stroke-width="1" fill="none" stroke-linecap="round"/>
+            <animateMotion id="pmFlowAnim" dur="6s" begin="indefinite" repeatCount="indefinite" rotate="0">
+              <mpath xlink:href="#pmFlowPath" href="#pmFlowPath"/>
+            </animateMotion>
+          </g>
+        </svg>
+        <div class="pm-flow-label" style="left:4%; top:70%;"><b>Charge Review</b></div>
+        <div class="pm-flow-label pm-flow-label-up" style="left:22%; top:25%;"><b>Claim Preparation</b></div>
+        <div class="pm-flow-label" style="left:40%; top:75%;"><b>Claim Status</b></div>
+        <div class="pm-flow-label pm-flow-label-up" style="left:58%; top:25%;"><b>Payment Posting</b></div>
+        <div class="pm-flow-label" style="left:76%; top:75%;"><b>Patient Balances</b></div>
+        <div class="pm-flow-label pm-flow-label-up" style="left:90%; top:30%;"><b>Account Follow‑Up</b></div>
+      </div>
+      <div style="text-align:center; margin-top:18px;">
+        <a class="btn btn-ghost" href="#practice-mate" data-goto="practice-mate">Review Billing Features</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: Practice Reports — mini analytics dashboard mockup -->
+  <section class="section tinted">
+    <div class="wrap">
+      <div class="pm-feature-row">
+        <div class="reveal">
+          <div class="eyebrow">Practice Reports</div>
+          <h2>Review What Is Happening Across the Practice</h2>
+          <p>Practice Mate provides reports covering appointments, claims, payments, balances, and provider activity.</p>
+          <p>Administrators can filter information by provider, location, date, or status to identify pending work and review overall practice activity.</p>
+          <ul class="check-list">
+            <li>Appointment activity</li>
+            <li>Cancellation and no‑show records</li>
+            <li>Claim status</li>
+            <li>Payment records</li>
+            <li>Outstanding balances</li>
+            <li>Provider and location reports</li>
+          </ul>
+          <a class="card-more" href="#practice-mate" data-goto="practice-mate">View Reporting Options →</a>
+        </div>
+        <div class="pm-dash reveal">
+          <div class="pm-dash-kpis">
+            <div class="pm-dash-kpi"><span>Visits today</span><b>38</b></div>
+            <div class="pm-dash-kpi"><span>Claims pending</span><b>12</b></div>
+            <div class="pm-dash-kpi"><span>No‑shows</span><b>3</b></div>
+          </div>
+          <div class="pm-dash-chart">
+            <div class="pm-dash-chart-head">Appointments by day</div>
+            <div class="pm-dash-bars">
+              <div class="pm-bar" style="height:52%;"></div>
+              <div class="pm-bar" style="height:74%;"></div>
+              <div class="pm-bar" style="height:61%;"></div>
+              <div class="pm-bar" style="height:88%;"></div>
+              <div class="pm-bar" style="height:69%;"></div>
+              <div class="pm-bar pm-bar-key" style="height:95%;"></div>
+              <div class="pm-bar" style="height:40%;"></div>
+            </div>
+          </div>
+          <div class="pm-dash-list">
+            <div class="pm-dash-list-row"><span>Outstanding balances</span><b>$18,240</b></div>
+            <div class="pm-dash-list-row"><span>Payments posted (7d)</span><b>$41,960</b></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 6: Closing CTA — light gradient band, distinct from the dark cta-band pattern -->
+  <section class="section">
+    <div class="wrap">
+      <div class="pm-cta reveal">
+        <h2>See Practice Mate With Your Workflow</h2>
+        <p>Schedule a walkthrough based on your specialty, number of providers, locations, and current operating process.</p>
+        <div class="pm-cta-actions">
+          <a class="btn btn-primary" href="#contact" data-goto="contact">Book a Product Demo</a>
+          <a class="btn btn-dark-ghost" href="#contact" data-goto="contact">Contact Our Team</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
+
+<!-- ============================================================ -->
 
 <!-- ============================================================ -->
 <!-- PAGE: SOLUTIONS (capability set) -->
@@ -1938,7 +2247,7 @@ footer{background:var(--ink); color:#B7C0CE; padding:64px 0 30px;}
       </div>
       <div><h5>Products</h5><ul>
         <li><a href="#" data-goto="edi-clearing-house">EDI Clearing House</a></li>
-        <li><a href="#" data-detail="practice-mate">Practice Mate</a></li>
+        <li><a href="#" data-goto="practice-mate">Practice Mate</a></li>
         <li><a href="#" data-detail="ehr-247">EHR 24/7</a></li>
         <li><a href="#" data-detail="insurance-discovery">Insurance Discovery</a></li>
       </ul></div>
@@ -1981,7 +2290,7 @@ const DEFAULT_NAV = {
   menus: [
     { key:'products', label:'Products', page:'products', items:[
       {title:'EDI Clearing House', gotoPage:'edi-clearing-house'},
-      {title:'Practice Mate', slug:'practice-mate'},
+      {title:'Practice Mate', gotoPage:'practice-mate'},
       {title:'EHR 24/7', slug:'ehr-247'},
       {title:'Insurance Discovery', slug:'insurance-discovery', tag:'Coming soon'}
     ]},
@@ -2362,10 +2671,6 @@ const ITEMS = {
     glyphs:['✉️','📞','💬'], heights:[80,60,92]},
 
   /* ---------- Products (new module lineup) ---------- */
-  'practice-mate': {hub:'products', hubLabel:'Products', title:'Practice Mate', eyebrow:'Product',
-    desc:'The practice management workspace for scheduling, registration, check‑in, eligibility, and front‑desk coordination. Practice Mate keeps the operational side of the practice, from the first call to check‑in, in one connected system.',
-    bullets:['Appointment scheduling','Patient registration','Provider calendar management','Check‑in workflow','Insurance details capture','Eligibility workflow support','Multi‑provider scheduling'],
-    glyphs:['📅','🧾','🛡️'], heights:[92,64,78]},
   'ehr-247': {hub:'products', hubLabel:'Products', title:'EHR 24/7', eyebrow:'Product',
     desc:'The OpenEMR‑based clinical workspace, available around the clock on managed cloud hosting. EHR 24/7 gives providers charting, encounters, prescriptions, orders, and care documentation without maintaining local servers.',
     bullets:['Patient demographics and chart history','Encounter notes and clinical documentation','Diagnosis and treatment plan documentation','Medication and allergy history','ePrescribing workflow','Lab and imaging order support','Role‑based access for clinical teams'],
@@ -2729,6 +3034,29 @@ setInterval(stepPipeline, 1500);
           if(anim && typeof anim.beginElement==='function'){
             setTimeout(()=>{ try{ anim.beginElement(); }catch(e){} }, i*160);
           }
+        }
+        io.disconnect();
+      }
+    });
+  }, {threshold:.35});
+  io.observe(wrap);
+})();
+
+/* ============================================================
+   BILLING & CLAIMS — traveling token trigger
+============================================================ */
+(function(){
+  const wrap=document.getElementById('pmFlow');
+  const svg=document.getElementById('pmFlowSvg');
+  if(!wrap||!svg) return;
+  let fired=false;
+  const io=new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting && !fired){
+        fired=true;
+        const anim=svg.getElementById('pmFlowAnim');
+        if(anim && typeof anim.beginElement==='function'){
+          try{ anim.beginElement(); }catch(e){}
         }
         io.disconnect();
       }
