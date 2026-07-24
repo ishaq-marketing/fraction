@@ -689,6 +689,12 @@ footer{background:var(--ink); color:#B7C0CE; padding:64px 0 30px;}
 .check-list-lg li{display:flex; align-items:flex-start; gap:12px; font-size:15.5px; font-weight:500; color:var(--navy);}
 .check-list-lg li .dot{width:22px; height:22px; border-radius:50%; background:var(--blue-soft); border:1px solid var(--blue); color:var(--blue); flex-shrink:0; display:flex; align-items:center; justify-content:center; font-size:11px; margin-top:1px;}
 .avail-row{display:flex; align-items:center; gap:18px; margin-top:22px; flex-wrap:wrap;}
+.outcome-strip{display:flex; gap:0; margin:26px 0; max-width:460px;}
+.outcome-item{flex:1; padding:0 18px; border-left:2px solid var(--line);}
+.outcome-item:first-child{padding-left:0; border-left:none;}
+.outcome-item b{display:block; font-size:15px; color:var(--navy); margin-bottom:6px; line-height:1.25;}
+.outcome-item span{display:block; font-size:12px; color:var(--ink-soft); line-height:1.5;}
+@media (max-width:640px){ .outcome-strip{flex-direction:column; gap:16px;} .outcome-item{border-left:none; padding-left:0; border-top:2px solid var(--line); padding-top:14px;} .outcome-item:first-child{border-top:none; padding-top:0;} }
 .avail-row .lbl{font-size:12.5px; color:var(--ink-soft); font-weight:500;}
 .avail-chip{display:flex; align-items:center; gap:8px; font-size:13.5px; font-weight:500; color:var(--navy);}
 .avail-chip .sw{width:26px; height:26px; border-radius:8px; background:var(--grad); display:flex; align-items:center; justify-content:center; font-size:13px; color:#fff;}
@@ -1227,13 +1233,11 @@ footer{background:var(--ink); color:#B7C0CE; padding:64px 0 30px;}
         <div class="eyebrow">Revenue Cycle Management</div>
         <h2 style="font-size:34px;">Get paid faster</h2>
         <p style="color:var(--ink-soft); font-size:15.5px; line-height:1.65; max-width:440px;">Reduce denials, resolve claim issues and improve payment speed. All within a single, integrated billing and clearinghouse platform.</p>
-        <ul class="check-list-lg">
-          <li><span class="dot">✓</span>Submit claims electronically to any payer</li>
-          <li><span class="dot">✓</span>Verify eligibility and catch coverage issues early</li>
-          <li><span class="dot">✓</span>Process payments and manage remits in one portal</li>
-          <li><span class="dot">✓</span>Coding validated before a claim ever goes out</li>
-          <li><span class="dot">✓</span>Improve cash flow and reduce A/R days</li>
-        </ul>
+        <div class="outcome-strip">
+          <div class="outcome-item"><b>Fewer Denials</b><span>Coverage and coding issues caught before submission</span></div>
+          <div class="outcome-item"><b>Faster Payments</b><span>Claims move to the payer without manual handoffs</span></div>
+          <div class="outcome-item"><b>Lower A/R Days</b><span>Remits and balances tracked in one place</span></div>
+        </div>
         <div class="avail-row">
           <span class="lbl">Available with:</span>
           <span class="avail-chip"><span class="sw">RCM</span>Revenue Cycle Management</span>
