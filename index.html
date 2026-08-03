@@ -2531,52 +2531,64 @@ const ITEMS = {
 
   /* ---------- Features ---------- */
   'feat-patient-records': {hub:'features', hubLabel:'Features', title:'Patient Records', eyebrow:'Feature',
-    desc:'Manage demographics, history, insurance details, documents, and patient chart information in one OpenEMR‑based record that every authorized team member works from.',
-    bullets:['Demographics and contact details','Medical and visit history','Insurance details on file','Document and file storage','Unified chart across the practice'],
+    headline:'A complete patient record, ready at every visit',
+    desc:'Keep demographics, insurance details, medical history, documents, medications, allergies, and visit information in one organized patient chart.',
+    bullets:['One chart for clinical and administrative information','Providers see history, medications, and documents before the encounter','Front‑desk and billing work from the same record','Role‑based permissions control what each user can access'],
     glyphs:['🗂️','📋','🩺'], heights:[80,64,92]},
   'feat-scheduling': {hub:'features', hubLabel:'Features', title:'Appointment Scheduling', eyebrow:'Feature',
-    desc:'Coordinate provider calendars, visit types, appointment changes, and daily schedule flow so the front desk and clinical teams always share the same view of the day.',
-    bullets:['Provider calendar management','Visit type configuration','Reschedule and cancellation handling','Daily schedule overview','Multi‑provider coordination'],
+    headline:'Manage provider schedules from one calendar',
+    desc:'Create appointments, select visit types, review availability, record cancellations, and update daily schedules in one view.',
+    bullets:['Shared calendar view across staff and providers','Appointment details connected to the patient record','Incomplete intake or insurance flagged before check‑in','Schedule changes reflected for the whole team in real time'],
     glyphs:['📅','🕑','👥'], heights:[92,66,78]},
   'feat-intake': {hub:'features', hubLabel:'Features', title:'Digital Intake & Registration', eyebrow:'Feature',
-    desc:'Capture patient details, insurance information, forms, and visit requirements before the encounter, so nothing has to be re‑entered later in the workflow.',
-    bullets:['Guided patient registration','Insurance capture at intake','Digital intake forms','Visit requirement checks','Front‑desk workload reduced'],
+    headline:'Collect patient information before check‑in',
+    desc:'Let patients complete registration details, insurance information, medical history, consent forms, and questionnaires before their appointment.',
+    bullets:['Patients submit demographics, insurance, and history in advance','Staff review submissions and catch missing fields early','Returning patients update records instead of re‑entering them','Submitted information becomes part of the patient record'],
     glyphs:['🧾','📝','✅'], heights:[74,90,66]},
   'feat-eligibility': {hub:'features', hubLabel:'Features', title:'Insurance Eligibility', eyebrow:'Feature',
-    desc:'Support eligibility verification workflows before check‑in and claim submission, so coverage issues surface early instead of turning into denied claims.',
-    bullets:['Eligibility verification workflow','Coverage checked before the visit','Fewer coverage‑related denials','Front‑desk alerts for issues'],
+    headline:'Check coverage before the appointment',
+    desc:'Review available eligibility information before the visit or claim submission and identify records that require attention.',
+    bullets:['Coverage, member, and benefit details reviewed before check‑in','Inactive coverage or incorrect details caught early','Billing teams start with more complete information','Available detail varies by payer and connected service'],
     glyphs:['🛡️','✅','📶'], heights:[92,66,78]},
   'feat-clinical-notes': {hub:'features', hubLabel:'Features', title:'Clinical Notes & Documentation', eyebrow:'Feature',
-    desc:'Document complaints, history, exam findings, assessments, plans, orders, and follow‑up in a structured clinical note that stays connected to the patient record.',
-    bullets:['Structured encounter notes','Assessment and plan documentation','Orders captured in the note','Follow‑up tracking','Coding‑ready output'],
+    headline:'Document the full encounter in one workflow',
+    desc:'Record complaints, history, exam findings, assessments, diagnoses, treatment plans, orders, and follow‑up information in the patient chart.',
+    bullets:['History, exam, assessment, and plan documented without switching records','Orders and prescriptions stay linked to the encounter','Previous notes available for comparison at the next visit','A predictable structure across every provider'],
     glyphs:['📋','🩺','🗒️'], heights:[70,94,64]},
   'feat-eprescribing': {hub:'features', hubLabel:'Features', title:'ePrescribing', eyebrow:'Feature',
-    desc:'Manage prescription workflows from the patient chart with medication and allergy visibility, keeping prescribing connected to the rest of the encounter.',
-    bullets:['Prescription workflow from the chart','Medication history visibility','Allergy visibility','Connected to encounter documentation'],
+    headline:'Manage prescriptions from the patient chart',
+    desc:'Review medication history, allergies, diagnoses, and encounter information while creating or updating prescriptions.',
+    bullets:['Medications, allergies, and treatment history visible before prescribing','New prescriptions and changes become part of the ongoing record','No separate medication history to maintain','Treatment changes comparable across visits'],
     glyphs:['💊','📄','⚕️'], heights:[86,68,90]},
   'feat-labs-orders': {hub:'features', hubLabel:'Features', title:'Labs & Orders', eyebrow:'Feature',
-    desc:'Support lab, imaging, and clinical order workflows connected to the encounter, so orders and results stay attached to the right visit and patient.',
-    bullets:['Lab order support','Imaging order support','Orders linked to the encounter','Result documentation'],
+    headline:'Keep orders, results, and follow‑up connected',
+    desc:'Create and manage laboratory, imaging, diagnostic, and clinical orders from the patient chart.',
+    bullets:['Orders, dates, and supporting notes recorded with the encounter','Results and reports attach to the same patient record','Current and previous orders reviewed without separate systems','Follow‑up actions stay connected to the original order'],
     glyphs:['🧪','📤','📎'], heights:[74,92,62]},
   'feat-billing-claims': {hub:'features', hubLabel:'Features', title:'Billing & Claims', eyebrow:'Feature',
-    desc:'Create claims, manage coding, track submission status, and support payment posting, connecting the clinical encounter to the billing workflow.',
-    bullets:['Claim creation','Coding workflow','Submission status tracking','Payment posting support'],
+    headline:'Connect the patient encounter to the billing process',
+    desc:'Create claims, review coding details, track submissions, record payments, and manage balances from one connected workflow.',
+    bullets:['Diagnoses, procedures, claims, and payments reviewed in one place','Claims tracked from submission through follow‑up','Payments and balances stay attached to the patient account','A clear view of accounts that still need attention'],
     glyphs:['🏷️','🧾','💰'], heights:[80,60,92]},
   'feat-patient-portal': {hub:'features', hubLabel:'Features', title:'Patient Portal', eyebrow:'Feature',
-    desc:'Support patient access to selected information, forms, statements, and communication workflows, based on the practice\u2019s setup and operational requirements.',
-    bullets:['Patient access to selected information','Digital forms','Statement access','Communication workflows'],
+    headline:'Give patients direct access to common practice tasks',
+    desc:'Allow patients to complete forms, view selected information, access statements, submit documents, and contact the practice online.',
+    bullets:['Forms, statements, and updates handled outside office hours','Submitted information stays connected to the patient account','Your practice controls which records and functions are visible','Portal messages create a documented communication channel'],
     glyphs:['📱','💬','🧾'], heights:[74,90,66]},
   'feat-reports': {hub:'features', hubLabel:'Features', title:'Reports & Analytics', eyebrow:'Feature',
-    desc:'Review appointments, claims, payments, provider activity, A/R, and operational trends without exporting data into manual spreadsheets.',
-    bullets:['Appointment and volume reports','Claim status and payment reports','Provider activity reporting','A/R summaries','Operational trend visibility'],
+    headline:'Review practice performance without rebuilding reports',
+    desc:'Track appointments, claims, payments, provider activity, accounts receivable, and operational trends using data already recorded in the system.',
+    bullets:['Scheduling, clinical, and financial activity in one view','No combining multiple spreadsheets for routine reporting','Changes in claims, collections, or activity easier to spot','Available reports depend on practice configuration'],
     glyphs:['📊','📈','🧾'], heights:[88,72,60]},
   'feat-role-access': {hub:'features', hubLabel:'Features', title:'Role‑Based Access', eyebrow:'Feature',
-    desc:'Control access for providers, front desk, billing teams, administrators, and support users, keeping the right information in front of the right people.',
-    bullets:['Role‑based permissions','Provider, front‑desk and billing roles','Administrator controls','Access aligned to responsibilities'],
+    headline:'Give each user access based on their responsibilities',
+    desc:'Control which records, tools, and workflows are available to providers, clinical staff, front‑desk teams, billers, and administrators.',
+    bullets:['Access assigned by job function, not by default','Users see only the tools required for their work','Administrators adjust permissions as roles change','Access stays aligned with how the practice actually operates'],
     glyphs:['🔐','🧑‍💼','⚙️'], heights:[92,68,80]},
   'feat-data-migration': {hub:'features', hubLabel:'Features', title:'Data Migration', eyebrow:'Feature',
-    desc:'Move patient records, documents, and workflow data from OpenEMR or another system with guided support, so onboarding doesn\u2019t mean losing history.',
-    bullets:['Patient record migration','Document migration','Workflow data transfer','Guided, validated import'],
+    headline:'Move your practice data into FractionEHR',
+    desc:'Transfer patient records, documents, and available practice information through a planned migration and validation process.',
+    bullets:['Migration scope defined from your current system\u2019s data','Information mapped to the appropriate areas of the new system','Migrated records validated before daily use begins','Onboarding covers where information lives and how tasks are done'],
     glyphs:['🔐','📥','✅'], heights:[86,64,92]},
 
   /* ---------- Additional specialties ---------- */
@@ -2644,7 +2656,56 @@ const ITEMS = {
     glyphs:['🔍','🛡️','✅'], heights:[88,66,80]}
 };
 
-const EXTRA_DETAILS = {};
+const EXTRA_DETAILS = {
+  'feat-patient-records': { steps:[
+    ['One chart for clinical and administrative information','FractionEHR keeps the information your team uses throughout the patient journey in one record. Providers can review prior visits, medical history, medications, allergies, diagnoses, orders, and uploaded documents before opening a new encounter. Front‑desk staff can confirm contact and insurance details without searching through separate systems, and billing teams can review account and encounter information connected to the same patient.'],
+    ['Review the patient\u2019s history without rebuilding it','Each visit becomes part of an ongoing record. Providers can compare current findings with previous notes, review treatment history, and prepare for follow‑up care with the relevant information already available. Role‑based permissions determine which parts of the chart each user can access.']
+  ]},
+  'feat-scheduling': { steps:[
+    ['Keep the schedule connected to the patient record','FractionEHR gives staff a shared view of provider calendars and appointment activity. Team members can schedule new visits, move appointments, update statuses, record cancellations, and review the day\u2019s workload, with appointment details connected to registration, insurance, and prior visit information.'],
+    ['Handle schedule changes without losing visibility','Cancellations, rescheduled visits, and added appointments can affect the entire team. Updates made in the schedule are reflected in the shared calendar, helping staff and providers work from the same information throughout the day.']
+  ]},
+  'feat-intake': { steps:[
+    ['Reduce paperwork at the front desk','FractionEHR moves intake tasks online so patients can provide required information before arriving at the practice. Patients can enter demographic details, update contact information, submit insurance data, complete forms, and provide medical history, while staff review submissions in advance and identify missing fields.'],
+    ['Prepare the chart before the patient arrives','Advance intake gives staff time to review insurance details, confirm required forms, and resolve incomplete information before check‑in. Providers can begin the encounter with the patient\u2019s submitted history already available, shortening registration and reducing interruptions during the visit.']
+  ]},
+  'feat-eligibility': { steps:[
+    ['Find insurance issues earlier','FractionEHR connects eligibility checks to the patient\u2019s insurance and appointment information. Staff can review coverage status, member details, effective dates, and available benefit information returned by the payer or eligibility service, so inactive coverage or missing details can be addressed before check‑in.'],
+    ['Prepare patients and billing staff before care is delivered','Early verification gives the practice time to request updated insurance information, correct the patient record, or discuss coverage questions before the visit. Billing teams begin with more complete information, and patients are less likely to encounter unexpected issues at the front desk.']
+  ]},
+  'feat-clinical-notes': { steps:[
+    ['Keep the note connected to the visit','FractionEHR gives providers a structured workflow for documenting each stage of the encounter. Review the patient\u2019s existing medical history, medications, allergies, and previous notes while recording the current visit, adding the reason for the visit, exam findings, assessment, diagnoses, treatment decisions, and follow‑up plan without moving between disconnected records.'],
+    ['Build a consistent clinical record over time','Structured documentation keeps important information in predictable sections while allowing providers to record the details specific to each patient. Previous notes remain available for comparison, making it easier to review changes, monitor treatment, and prepare for follow‑up appointments.']
+  ]},
+  'feat-eprescribing': { steps:[
+    ['Keep medication decisions in the clinical record','FractionEHR connects prescribing activity to the patient and the current encounter. Providers can review documented medications, allergies, previous treatment, diagnoses, and relevant visit notes before managing a prescription, and new prescriptions, medication changes, and discontinued medications become part of the patient\u2019s ongoing record.'],
+    ['Review treatment changes across visits','Medication management often continues after the original prescription. Providers can review earlier therapy, document changes, and compare the patient\u2019s current medication list with previous visits, creating a clearer record of how treatment has changed over time.']
+  ]},
+  'feat-labs-orders': { steps:[
+    ['Track the full order history','FractionEHR connects each order to the patient and the visit in which it was created. Providers can record the order, associated diagnosis, date, and supporting notes, while results and reports can be documented or uploaded to the same patient record, giving the care team the context behind the request.'],
+    ['Document what happens after the result','A result may require provider review, patient communication, a treatment change, another order, or a follow‑up appointment. FractionEHR keeps these actions connected to the original order, so the patient record shows both the result and the next step.']
+  ]},
+  'feat-billing-claims': { steps:[
+    ['Work from the same encounter information','FractionEHR connects billing activity to the patient record and the visit that generated the charge. Billing staff can review diagnoses, procedures, encounter details, claims, payments, and account activity in one place, and claims can be prepared and tracked from submission through follow‑up.'],
+    ['See which accounts still need attention','Claims may require correction, resubmission, supporting documentation, or payer follow‑up. FractionEHR gives billing teams a clear view of unresolved activity, so staff can review claim and balance status and determine the next action from the same account history.']
+  ]},
+  'feat-patient-portal': { steps:[
+    ['Reduce routine calls and paperwork','The FractionEHR patient portal gives patients a defined place to manage supported tasks outside the office. Patients can complete requested forms, update information, review selected records, access account statements, and send non‑urgent messages, with submitted information staying connected to the patient account for staff review.'],
+    ['Keep patient communication attached to the record','Portal messages provide a documented communication channel between the patient and authorized staff. Instead of relying on personal email or untracked messages, the practice can review communication within the patient account and respond with the relevant information in view.']
+  ]},
+  'feat-reports': { steps:[
+    ['Use current practice data for routine reporting','FractionEHR brings scheduling, clinical, and financial activity into reports that authorized users can review without combining multiple spreadsheets. Practice leaders can monitor appointment volume, cancellations, provider activity, claims, payments, balances, and accounts receivable in one consistent view.'],
+    ['Identify changes that need follow‑up','Reporting makes it easier to spot changes in scheduling, claims, collections, or provider activity. Managers can review the underlying data, determine where attention is needed, and assign follow‑up work, so operational meetings can focus on decisions instead of report preparation.']
+  ]},
+  'feat-role-access': { steps:[
+    ['Limit access by job function','FractionEHR allows practices to assign access according to each user\u2019s role. Providers work with clinical records, documentation, orders, and prescriptions; front‑desk staff use scheduling, registration, and insurance functions; billing teams access claims, payments, and account information; and administrators manage users, settings, and reports.'],
+    ['Update permissions when responsibilities change','Roles and responsibilities change as staff join, move to new positions, or leave the practice. Administrators can adjust user access to reflect current duties, keeping permissions aligned with how the practice actually operates.']
+  ]},
+  'feat-data-migration': { steps:[
+    ['Define what needs to move','The migration process begins with a review of the data available from your current system, which may include patient demographics, contact details, insurance information, medical history, medications, allergies, clinical notes, documents, appointments, and account information. FractionEHR works with your team to identify priorities and map information to the appropriate areas of the new system.'],
+    ['Validate records before daily use','After migration, selected records and data fields are reviewed to confirm that information appears in the expected location and format. Staff onboarding covers where migrated information is stored and how common tasks are completed, giving the practice time to identify issues before the system becomes part of daily operations.']
+  ]}
+};
 
 function relatedItems(id){
   const cur = ITEMS[id];
@@ -2703,7 +2764,7 @@ function showDetail(id){
         <div class="detail-grid">
           <div class="reveal in">
             <div class="eyebrow">${item.eyebrow}</div>
-            <h1>${item.title}</h1>
+            <h1>${item.headline || item.title}</h1>
             <p class="lede">${item.desc}</p>
             <ul class="check-list">${item.bullets.map(b=>`<li>${b}</li>`).join('')}</ul>
             <div style="margin-top:28px; display:flex; gap:12px;">
@@ -2724,7 +2785,7 @@ function showDetail(id){
     <section class="section tinted">
       <div class="wrap">
         <div class="section-head reveal in"><div class="eyebrow">${copy.stepsEyebrow}</div><h2>${copy.stepsHeading(item.title)}</h2></div>
-        <div class="grid-3">
+        <div class="${extra.steps.length===2?'grid-2':'grid-3'}">
           ${extra.steps.map((s,i)=>`<div class="card reveal in"><div class="ic">${copy.stepBadge(i)}</div><h3>${s[0]}</h3><p>${s[1]}</p></div>`).join('')}
         </div>
       </div>
