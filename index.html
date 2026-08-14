@@ -1959,8 +1959,7 @@ footer{background:var(--ink); color:#B7C0CE; padding:64px 0 30px;}
       </div>
       <div class="page-banner" id="banner-company"></div>
       <div class="grid-3">
-        <div class="card reveal linkable" data-detail="about-emedemr"><div class="ic">🏢</div><h3>About FractionEHR</h3><p>How FractionEHR extends OpenEMR into a managed EHR and practice management platform.</p><span class="card-more">Learn more →</span></div>
-        <div class="card reveal linkable" data-detail="about-fbs"><div class="ic">💼</div><h3>About FBS</h3><p>Medical billing, revenue cycle management, credentialing, and the team behind FractionEHR.</p><span class="card-more">Learn more →</span></div>
+        <div class="card reveal linkable" data-detail="about-emedemr"><div class="ic">🏢</div><h3>Our Company</h3><p>Medical billing, revenue cycle management, credentialing, and the team behind FractionEHR.</p><span class="card-more">Learn more →</span></div>
         <div class="card reveal linkable" data-detail="about-hgt"><div class="ic">🛠️</div><h3>About HGT</h3><p>The engineering team behind the FractionEHR platform.</p><span class="card-more">Learn more →</span></div>
         <div class="card reveal linkable" data-detail="partner-with-us"><div class="ic">🤝</div><h3>Partner With Us</h3><p>For consultants, billing companies, and healthcare service providers interested in partnership.</p><span class="card-more">Learn more →</span></div>
         <div class="card reveal linkable" data-detail="contact-us"><div class="ic">✉️</div><h3>Contact Us</h3><p>Connect with the FractionEHR team for sales, support, partnership, or implementation questions.</p><span class="card-more">Learn more →</span></div>
@@ -2623,10 +2622,12 @@ const ITEMS = {
     glyphs:['📰','↻','🔔'], heights:[70,92,64]},
 
   /* ---------- Company ---------- */
-  'about-emedemr': {hub:'company', hubLabel:'Company', title:'About FractionEHR', eyebrow:'Company',
-    desc:'FractionEHR extends the OpenEMR‑based foundation into a managed EHR and practice management platform. An FBS product, engineered by Hamly Globaltech, it combines OpenEMR\u2019s flexibility with managed hosting, implementation support, billing workflow guidance, and dedicated assistance.',
-    bullets:['Built on the OpenEMR‑based foundation','An FBS product, engineered by Hamly Globaltech','Managed hosting and implementation support','Focused on real‑world practice operations'],
-    glyphs:['🏢','⚕️','☁️'], heights:[80,64,92]},
+  'about-emedemr': {hub:'company', hubLabel:'Company', title:'Our Company', eyebrow:'Company',
+    headline:'A Trusted Partner for Healthcare Operations',
+    desc:'Fraction Billing Services (FBS) supports healthcare providers across the United States with medical billing, revenue cycle management, coding, credentialing, denial management, eligibility verification, and payment follow‑up.',
+    bullets:['Works with hospitals, health systems, clinics, and independent providers','Focused on billing accuracy and fewer reimbursement delays','Helps control administrative costs and maintain cash flow','A HIPAA‑ready organization, adapted to each client\u2019s requirements'],
+    ctaLabel:'Contact FBS',
+    glyphs:['🏢','💰','📈'], heights:[86,66,60]},
   'about-fbs': {hub:'company', hubLabel:'Company', title:'About FBS', eyebrow:'Company',
     headline:'A Trusted Partner for Healthcare Operations',
     desc:'Fraction Billing Services (FBS) supports healthcare providers across the United States with medical billing, revenue cycle management, coding, credentialing, denial management, eligibility verification, and payment follow‑up.',
@@ -2658,6 +2659,11 @@ const ITEMS = {
 };
 
 const EXTRA_DETAILS = {
+  'about-emedemr': { steps:[
+    ['Who We Work With','Our team works with hospitals, health systems, clinics, and independent providers to improve billing accuracy, reduce reimbursement delays, control administrative costs, and maintain consistent cash flow.'],
+    ['Beyond Billing Services','FBS also offers FractionEHR, an EHR and practice management product created to support patient records, appointments, clinical documentation, billing, claims, reporting, and everyday practice operations.'],
+    ['Compliance & Our Objective','As a HIPAA‑ready organization, we follow established standards for handling healthcare information and adapt our services to the operational requirements of each client. Our objective is clear: help healthcare providers manage their financial and administrative work more effectively while maintaining their focus on patient care.']
+  ]},
   'about-fbs': { steps:[
     ['Who We Work With','Our team works with hospitals, health systems, clinics, and independent providers to improve billing accuracy, reduce reimbursement delays, control administrative costs, and maintain consistent cash flow.'],
     ['Beyond Billing Services','FBS also offers FractionEHR, an EHR and practice management product created to support patient records, appointments, clinical documentation, billing, claims, reporting, and everyday practice operations.'],
