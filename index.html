@@ -1960,7 +1960,7 @@ footer{background:var(--ink); color:#B7C0CE; padding:64px 0 30px;}
       <div class="page-banner" id="banner-company"></div>
       <div class="grid-3">
         <div class="card reveal linkable" data-detail="about-emedemr"><div class="ic">🏢</div><h3>About FractionEHR</h3><p>How FractionEHR extends OpenEMR into a managed EHR and practice management platform.</p><span class="card-more">Learn more →</span></div>
-        <div class="card reveal linkable" data-detail="about-fbs"><div class="ic">💼</div><h3>About FBS</h3><p>The FBS role behind FractionEHR and the billing operations experience supporting the product.</p><span class="card-more">Learn more →</span></div>
+        <div class="card reveal linkable" data-detail="about-fbs"><div class="ic">💼</div><h3>About FBS</h3><p>Medical billing, revenue cycle management, credentialing, and the team behind FractionEHR.</p><span class="card-more">Learn more →</span></div>
         <div class="card reveal linkable" data-detail="about-hgt"><div class="ic">🛠️</div><h3>About HGT</h3><p>The engineering team behind the FractionEHR platform.</p><span class="card-more">Learn more →</span></div>
         <div class="card reveal linkable" data-detail="partner-with-us"><div class="ic">🤝</div><h3>Partner With Us</h3><p>For consultants, billing companies, and healthcare service providers interested in partnership.</p><span class="card-more">Learn more →</span></div>
         <div class="card reveal linkable" data-detail="contact-us"><div class="ic">✉️</div><h3>Contact Us</h3><p>Connect with the FractionEHR team for sales, support, partnership, or implementation questions.</p><span class="card-more">Learn more →</span></div>
@@ -2628,8 +2628,10 @@ const ITEMS = {
     bullets:['Built on the OpenEMR‑based foundation','An FBS product, engineered by Hamly Globaltech','Managed hosting and implementation support','Focused on real‑world practice operations'],
     glyphs:['🏢','⚕️','☁️'], heights:[80,64,92]},
   'about-fbs': {hub:'company', hubLabel:'Company', title:'About FBS', eyebrow:'Company',
-    desc:'FBS is the company behind FractionEHR, bringing billing operations experience that shapes how the platform supports claims, payments, balances, and revenue cycle workflows.',
-    bullets:['The company behind FractionEHR','Billing operations experience','Revenue cycle workflow focus','Product direction and support'],
+    headline:'A Trusted Partner for Healthcare Operations',
+    desc:'Fraction Billing Services (FBS) supports healthcare providers across the United States with medical billing, revenue cycle management, coding, credentialing, denial management, eligibility verification, and payment follow‑up.',
+    bullets:['Works with hospitals, health systems, clinics, and independent providers','Focused on billing accuracy and fewer reimbursement delays','Helps control administrative costs and maintain cash flow','A HIPAA‑ready organization, adapted to each client\u2019s requirements'],
+    ctaLabel:'Contact FBS',
     glyphs:['🏢','💰','📈'], heights:[86,66,60]},
   'about-hgt': {hub:'company', hubLabel:'Company', title:'About HGT', eyebrow:'Company',
     desc:'Hamly Globaltech (HGT) is the engineering team behind the FractionEHR platform, responsible for building and maintaining the managed layer on top of OpenEMR.',
@@ -2656,6 +2658,11 @@ const ITEMS = {
 };
 
 const EXTRA_DETAILS = {
+  'about-fbs': { steps:[
+    ['Who We Work With','Our team works with hospitals, health systems, clinics, and independent providers to improve billing accuracy, reduce reimbursement delays, control administrative costs, and maintain consistent cash flow.'],
+    ['Beyond Billing Services','FBS also offers FractionEHR, an EHR and practice management product created to support patient records, appointments, clinical documentation, billing, claims, reporting, and everyday practice operations.'],
+    ['Compliance & Our Objective','As a HIPAA‑ready organization, we follow established standards for handling healthcare information and adapt our services to the operational requirements of each client. Our objective is clear: help healthcare providers manage their financial and administrative work more effectively while maintaining their focus on patient care.']
+  ]},
   'feat-patient-records': { steps:[
     ['One chart for clinical and administrative information','FractionEHR keeps the information your team uses throughout the patient journey in one record. Providers can review prior visits, medical history, medications, allergies, diagnoses, orders, and uploaded documents before opening a new encounter. Front‑desk staff can confirm contact and insurance details without searching through separate systems, and billing teams can review account and encounter information connected to the same patient.'],
     ['Review the patient\u2019s history without rebuilding it','Each visit becomes part of an ongoing record. Providers can compare current findings with previous notes, review treatment history, and prepare for follow‑up care with the relevant information already available. Role‑based permissions determine which parts of the chart each user can access.']
@@ -2767,7 +2774,7 @@ function showDetail(id){
             <p class="lede">${item.desc}</p>
             <ul class="check-list">${item.bullets.map(b=>`<li>${b}</li>`).join('')}</ul>
             <div style="margin-top:28px; display:flex; gap:12px;">
-              <a class="btn btn-primary" href="#contact" data-goto="contact">Schedule Demo</a>
+              <a class="btn btn-primary" href="#contact" data-goto="contact">${item.ctaLabel || 'Schedule Demo'}</a>
               <button class="btn btn-ghost" data-goto="${item.hub}">See all ${item.hubLabel}</button>
             </div>
           </div>
