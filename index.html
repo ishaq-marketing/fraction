@@ -506,6 +506,14 @@ table.cmp tr:hover td.win{background:#EAFBF9;}
 .pm-cta p{color:var(--ink-soft); font-size:15.5px; max-width:520px; margin:0 auto 28px;}
 .pm-cta-actions{display:flex; gap:14px; justify-content:center; flex-wrap:wrap;}
 
+/* EHR 24/7 — Product Benefits (definition-list, distinct from the card grid above it) */
+.ehr-benefits{display:grid; grid-template-columns:1fr 1fr; gap:0; max-width:900px; margin:0 auto; border-top:1px solid var(--line);}
+.ehr-benefit{padding:28px 30px; border-bottom:1px solid var(--line);}
+.ehr-benefit:nth-child(odd){border-right:1px solid var(--line);}
+.ehr-benefit h4{font-size:16px; margin-bottom:8px; color:var(--navy);}
+.ehr-benefit p{font-size:13.5px; color:var(--ink-soft); line-height:1.6;}
+@media (max-width:700px){ .ehr-benefits{grid-template-columns:1fr;} .ehr-benefit:nth-child(odd){border-right:none;} .ehr-benefit{padding:22px 4px;} }
+
 .plan h3{font-size:19px; margin-bottom:6px;}
 .plan .desc{font-size:13px; color:var(--ink-soft); margin-bottom:20px; min-height:32px;}
 .plan .price{display:flex; align-items:baseline; gap:6px; margin-bottom:22px;}
@@ -1492,7 +1500,7 @@ footer{background:var(--ink); color:#B7C0CE; padding:64px 0 30px;}
       <div class="grid-2">
         <div class="card reveal linkable" data-goto="edi-clearing-house"><div class="ic">⇄</div><h3>EDI Clearing House</h3><p>Electronic claim submission, clearinghouse setup and testing, status tracking, and rejection handling, connected to the billing workflow.</p><span class="card-more">Learn more →</span></div>
         <div class="card reveal linkable" data-goto="practice-mate"><div class="ic">📅</div><h3>Practice Mate</h3><p>Scheduling, registration, check‑in, eligibility, and front‑desk coordination in one practice management workspace.</p><span class="card-more">Learn more →</span></div>
-        <div class="card reveal linkable" data-detail="ehr-247"><div class="ic">🩺</div><h3>EHR 24/7</h3><p>The OpenEMR‑based clinical workspace on managed cloud hosting: charting, encounters, prescriptions, orders, and documentation.</p><span class="card-more">Learn more →</span></div>
+        <div class="card reveal linkable" data-goto="ehr-247"><div class="ic">🩺</div><h3>EHR 24/7</h3><p>The OpenEMR‑based clinical workspace on managed cloud hosting: charting, encounters, prescriptions, orders, and documentation.</p><span class="card-more">Learn more →</span></div>
         <div class="card reveal linkable" data-detail="insurance-discovery"><div class="ic">🔍</div><h3>Insurance Discovery <span class="soon-pill">Coming soon</span></h3><p>Identify active coverage when insurance details are missing or incomplete, to reduce unbilled visits and eligibility‑related denials.</p><span class="card-more">Learn more →</span></div>
       </div>
     </div>
@@ -1875,6 +1883,128 @@ footer{background:var(--ink); color:#B7C0CE; padding:64px 0 30px;}
 </section>
 
 <!-- ============================================================ -->
+<!-- PAGE: EHR 24/7 (bespoke layout) -->
+<!-- ============================================================ -->
+<section class="page" id="page-ehr-247">
+
+  <!-- Section 1: Hero -->
+  <section class="edi-hero" style="background:linear-gradient(155deg, var(--navy) 0%, var(--blue-deep) 55%, #0f3a63 130%);">
+    <div class="wrap">
+      <div class="edi-hero-inner reveal">
+        <div class="eyebrow" style="color:var(--teal);">EHR 24/7</div>
+        <h1>Clinical Documentation, Prescribing and Orders in One Workspace</h1>
+        <p>Manage the clinical journey in one connected environment, from reviewing patient history and documenting encounters to prescribing medications and coordinating orders. EHR 24/7 gives providers access to the information and workflows they need without maintaining local servers.</p>
+        <a class="btn btn-primary" href="#contact" data-goto="contact">Schedule Demo</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Why It Matters — split layout with numbered points -->
+  <section class="section">
+    <div class="wrap">
+      <div class="edi-split">
+        <div class="edi-split-text reveal">
+          <div class="eyebrow">Why It Matters</div>
+          <h2>A More Connected Path from Patient History to Care Plan</h2>
+          <p>Clinical work becomes harder when patient history, encounter documentation, medications, diagnoses, and orders are managed through disconnected systems or inconsistent processes.</p>
+          <p>EHR 24/7 brings these activities into one clinical workspace, helping providers document care efficiently, access relevant patient information, and coordinate the next steps in treatment.</p>
+        </div>
+        <div class="edi-numbered reveal">
+          <div class="edi-num-item">
+            <span class="edi-num">01</span>
+            <div><h4>Bring Patient Information Together</h4><p>Review demographics, chart history, medications, allergies, diagnoses, and previous encounters from one connected patient record.</p></div>
+          </div>
+          <div class="edi-num-item">
+            <span class="edi-num">02</span>
+            <div><h4>Document Encounters More Consistently</h4><p>Capture clinical findings, assessments, diagnoses, and treatment plans through structured documentation workflows.</p></div>
+          </div>
+          <div class="edi-num-item">
+            <span class="edi-num">03</span>
+            <div><h4>Coordinate Clinical Actions Faster</h4><p>Manage prescriptions, renewals, lab requests, and imaging orders without moving between separate clinical systems.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: The Clinical Workspace — 6-item grid with category tags -->
+  <section class="section tinted">
+    <div class="wrap">
+      <div class="section-head center reveal">
+        <div class="eyebrow">The Clinical Workspace</div>
+        <h2>One Workspace Across the Care Journey</h2>
+        <p>Support the clinical activities providers and care teams complete throughout each patient encounter.</p>
+      </div>
+      <div class="edi-tx-grid">
+        <div class="edi-tx-card reveal">
+          <span class="edi-tx-code">Patient Record</span>
+          <h4>Patient Demographics and Chart History</h4>
+          <p>Access patient details, clinical history, previous encounters, documents, and other information required before and during care.</p>
+        </div>
+        <div class="edi-tx-card reveal">
+          <span class="edi-tx-code">Encounters</span>
+          <h4>Clinical Notes and Documentation</h4>
+          <p>Create structured encounter notes and record symptoms, observations, assessments, procedures, and follow‑up instructions.</p>
+        </div>
+        <div class="edi-tx-card reveal">
+          <span class="edi-tx-code">Care Planning</span>
+          <h4>Diagnoses and Treatment Plans</h4>
+          <p>Document diagnoses, maintain problem lists, and create treatment plans that remain connected to the patient record.</p>
+        </div>
+        <div class="edi-tx-card reveal">
+          <span class="edi-tx-code">Medications</span>
+          <h4>Medication and Allergy Management</h4>
+          <p>Review active medications, prescription history, documented allergies, and relevant medication information during care.</p>
+        </div>
+        <div class="edi-tx-card reveal">
+          <span class="edi-tx-code">Prescribing</span>
+          <h4>ePrescribing Workflows</h4>
+          <p>Create and manage electronic prescriptions, renewal requests, and medication changes through an integrated prescribing workflow.</p>
+        </div>
+        <div class="edi-tx-card reveal">
+          <span class="edi-tx-code">Orders</span>
+          <h4>Lab and Imaging Coordination</h4>
+          <p>Create laboratory and imaging orders, associate them with the appropriate encounter, and maintain supporting clinical details.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Product Benefits — definition-list style, deliberately not another card grid -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head center reveal">
+        <div class="eyebrow">Why EHR 24/7?</div>
+        <h2>Six Reasons Clinical Teams Stay Productive Here</h2>
+      </div>
+      <div class="ehr-benefits reveal">
+        <div class="ehr-benefit"><h4>Connected Patient Records</h4><p>Keep demographics, history, encounters, diagnoses, medications, allergies, and orders within one coordinated clinical environment.</p></div>
+        <div class="ehr-benefit"><h4>Clear Clinical Workflows</h4><p>Guide providers from chart review and encounter documentation through care planning, prescribing, and follow‑up activities.</p></div>
+        <div class="ehr-benefit"><h4>Less Duplicate Documentation</h4><p>Reuse relevant patient and encounter information instead of repeatedly entering the same clinical details across separate systems.</p></div>
+        <div class="ehr-benefit"><h4>Better Medication Visibility</h4><p>Give authorized providers access to medication and allergy information when reviewing treatment options and prescribing decisions.</p></div>
+        <div class="ehr-benefit"><h4>Role‑Based Team Access</h4><p>Provide clinical and administrative users with access based on their responsibilities within the practice.</p></div>
+        <div class="ehr-benefit"><h4>Implementation Support</h4><p>Receive assistance with environment setup, workflow configuration, data migration, staff onboarding, and ongoing system support.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: Final CTA -->
+  <section class="section tinted">
+    <div class="wrap">
+      <div class="cta-band reveal">
+        <div>
+          <h2>Bring Your Clinical Workflow into One Connected System</h2>
+          <p>Give providers a managed clinical workspace for patient records, encounter documentation, prescribing, orders, and care coordination, without maintaining local infrastructure.</p>
+        </div>
+        <a class="btn btn-primary" href="#contact" data-goto="contact">Talk to Our Team</a>
+      </div>
+    </div>
+  </section>
+</section>
+
+<!-- ============================================================ -->
+
+<!-- ============================================================ -->
 
 <!-- ============================================================ -->
 <!-- PAGE: SOLUTIONS (capability set) -->
@@ -2209,7 +2339,7 @@ footer{background:var(--ink); color:#B7C0CE; padding:64px 0 30px;}
       <div><h5>Products</h5><ul>
         <li><a href="#" data-goto="edi-clearing-house">EDI Clearing House</a></li>
         <li><a href="#" data-goto="practice-mate">Practice Mate</a></li>
-        <li><a href="#" data-detail="ehr-247">EHR 24/7</a></li>
+        <li><a href="#" data-goto="ehr-247">EHR 24/7</a></li>
         <li><a href="#" data-detail="insurance-discovery">Insurance Discovery</a></li>
       </ul></div>
       <div><h5>Solutions</h5><ul>
@@ -2252,7 +2382,7 @@ const DEFAULT_NAV = {
     { key:'products', label:'Products', page:'products', items:[
       {title:'EDI Clearing House', gotoPage:'edi-clearing-house'},
       {title:'Practice Mate', gotoPage:'practice-mate'},
-      {title:'EHR 24/7', slug:'ehr-247'},
+      {title:'EHR 24/7', gotoPage:'ehr-247'},
       {title:'Insurance Discovery', slug:'insurance-discovery', tag:'Coming soon'}
     ]},
     { key:'solutions', label:'Solutions', page:'features', groups:[
@@ -2648,10 +2778,6 @@ const ITEMS = {
     glyphs:['✉️','📞','💬'], heights:[80,60,92]},
 
   /* ---------- Products (new module lineup) ---------- */
-  'ehr-247': {hub:'products', hubLabel:'Products', title:'EHR 24/7', eyebrow:'Product',
-    desc:'The OpenEMR‑based clinical workspace, available around the clock on managed cloud hosting. EHR 24/7 gives providers charting, encounters, prescriptions, orders, and care documentation without maintaining local servers.',
-    bullets:['Patient demographics and chart history','Encounter notes and clinical documentation','Diagnosis and treatment plan documentation','Medication and allergy history','ePrescribing workflow','Lab and imaging order support','Role‑based access for clinical teams'],
-    glyphs:['🩺','📋','☁️'], heights:[70,96,68]},
   'insurance-discovery': {hub:'products', hubLabel:'Products', title:'Insurance Discovery', eyebrow:'Product', comingSoon:true,
     desc:'Insurance Discovery is coming soon. It is designed to help practices identify active coverage for patients when insurance details are missing or incomplete, reducing unbilled visits and eligibility‑related denials.',
     bullets:['Identify active coverage for patients','Surface missing or incomplete insurance details','Reduce eligibility‑related denials','Support cleaner claims before submission'],
