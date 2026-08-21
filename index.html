@@ -2387,34 +2387,34 @@ const DEFAULT_NAV = {
     ]},
     { key:'solutions', label:'Solutions', page:'features', groups:[
       {label:'', items:[
-        {title:'Patient Records', slug:'feat-patient-records'},
-        {title:'Digital Intake & Registration', slug:'feat-intake'},
-        {title:'Clinical Notes & Documentation', slug:'feat-clinical-notes'},
-        {title:'Labs & Orders', slug:'feat-labs-orders'},
-        {title:'Patient Portal', slug:'feat-patient-portal'},
-        {title:'Role‑Based Access', slug:'feat-role-access'}
+        {title:'Patient Records', href:'solutions.html#patient-records'},
+        {title:'Digital Intake & Registration', href:'solutions.html#digital-intake'},
+        {title:'Clinical Notes & Documentation', href:'solutions.html#clinical-notes'},
+        {title:'Labs & Orders', href:'solutions.html#labs-orders'},
+        {title:'Patient Portal', href:'solutions.html#patient-portal'},
+        {title:'Role‑Based Access', href:'solutions.html#role-based-access'}
       ]},
       {label:'', items:[
-        {title:'Appointment Scheduling', slug:'feat-scheduling'},
-        {title:'Insurance Eligibility', slug:'feat-eligibility'},
-        {title:'ePrescribing', slug:'feat-eprescribing'},
-        {title:'Billing & Claims', slug:'feat-billing-claims'},
-        {title:'Reports & Analytics', slug:'feat-reports'},
-        {title:'Data Migration', slug:'feat-data-migration'}
+        {title:'Appointment Scheduling', href:'solutions.html#appointment-scheduling'},
+        {title:'Insurance Eligibility', href:'solutions.html#insurance-eligibility'},
+        {title:'ePrescribing', href:'solutions.html#eprescribing'},
+        {title:'Billing & Claims', href:'solutions.html#billing-claims'},
+        {title:'Reports & Analytics', href:'solutions.html#reports-analytics'},
+        {title:'Data Migration', href:'solutions.html#data-migration'}
       ]}
     ], items:[
-      {title:'Patient Records', slug:'feat-patient-records'},
-      {title:'Digital Intake & Registration', slug:'feat-intake'},
-      {title:'Clinical Notes & Documentation', slug:'feat-clinical-notes'},
-      {title:'Labs & Orders', slug:'feat-labs-orders'},
-      {title:'Patient Portal', slug:'feat-patient-portal'},
-      {title:'Role‑Based Access', slug:'feat-role-access'},
-      {title:'Appointment Scheduling', slug:'feat-scheduling'},
-      {title:'Insurance Eligibility', slug:'feat-eligibility'},
-      {title:'ePrescribing', slug:'feat-eprescribing'},
-      {title:'Billing & Claims', slug:'feat-billing-claims'},
-      {title:'Reports & Analytics', slug:'feat-reports'},
-      {title:'Data Migration', slug:'feat-data-migration'}
+      {title:'Patient Records', href:'solutions.html#patient-records'},
+      {title:'Digital Intake & Registration', href:'solutions.html#digital-intake'},
+      {title:'Clinical Notes & Documentation', href:'solutions.html#clinical-notes'},
+      {title:'Labs & Orders', href:'solutions.html#labs-orders'},
+      {title:'Patient Portal', href:'solutions.html#patient-portal'},
+      {title:'Role‑Based Access', href:'solutions.html#role-based-access'},
+      {title:'Appointment Scheduling', href:'solutions.html#appointment-scheduling'},
+      {title:'Insurance Eligibility', href:'solutions.html#insurance-eligibility'},
+      {title:'ePrescribing', href:'solutions.html#eprescribing'},
+      {title:'Billing & Claims', href:'solutions.html#billing-claims'},
+      {title:'Reports & Analytics', href:'solutions.html#reports-analytics'},
+      {title:'Data Migration', href:'solutions.html#data-migration'}
     ]},
     { key:'resources', label:'Resources', page:'resources', items:[
       {title:'Blogs', slug:'blog'},
@@ -2997,6 +2997,7 @@ function renderNav(){
   });
 }
 function navigateToItem(page, item){
+  if(item && item.href){ window.location.href = item.href; return; }
   if(item && item.gotoPage){ go(item.gotoPage); return; }
   const id = item && (item.slug || item.persona);
   if(id && ITEMS[id]){ showDetail(id); return; }
